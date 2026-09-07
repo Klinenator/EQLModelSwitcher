@@ -5,6 +5,13 @@
 set -eu
 
 GAME_DIR="${EQL_GAME_DIR:-/Users/seankline/Downloads/EQLegends_setup}"
+
+if [ ! -d "$GAME_DIR" ] && [ -z "${EQL_GAME_DIR:-}" ]; then
+  printf '%s\n' "EQL installation folder not found at: $GAME_DIR"
+  printf '%s' "Enter your EQL installation folder: "
+  read -r GAME_DIR
+fi
+
 INI="$GAME_DIR/eqclient.ini"
 BACKUP_DIR="$GAME_DIR/eqclient-model-backups"
 

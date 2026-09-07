@@ -21,6 +21,8 @@ By default, the script uses:
 /Users/seankline/Downloads/EQLegends_setup
 ```
 
+If that folder does not exist, the script asks you to enter your EQL installation folder.
+
 To use another EQL folder:
 
 ```bash
