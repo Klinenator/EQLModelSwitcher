@@ -4,10 +4,9 @@
 
 set -eu
 
-GAME_DIR="${EQL_GAME_DIR:-/Users/seankline/Downloads/EQLegends_setup}"
-
-if [ ! -d "$GAME_DIR" ] && [ -z "${EQL_GAME_DIR:-}" ]; then
-  printf '%s\n' "EQL installation folder not found at: $GAME_DIR"
+if [ -n "${EQL_GAME_DIR:-}" ]; then
+  GAME_DIR="$EQL_GAME_DIR"
+else
   printf '%s' "Enter your EQL installation folder: "
   read -r GAME_DIR
 fi

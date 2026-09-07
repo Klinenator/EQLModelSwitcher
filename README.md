@@ -15,13 +15,7 @@ Quit EQL completely before changing models, then run:
 ./eql-models.sh restore
 ```
 
-By default, the script uses:
-
-```text
-/Users/seankline/Downloads/EQLegends_setup
-```
-
-If that folder does not exist, the script asks you to enter your EQL installation folder.
+The script asks you to enter your EQL installation folder when it starts.
 
 To use another EQL folder:
 
